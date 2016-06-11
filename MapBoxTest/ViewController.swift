@@ -14,21 +14,21 @@ import UIKit
 class ViewController: UIViewController
 {
     var appleMap:   MKMapView!
-    var mapBoxMap:  MGLMapView!
+    var mapboxMap:  MGLMapView!
     var googleMap:  GMSMapView!
     
     enum MapBrand
     {
         case Apple
         case Google
-        case MapBox
+        case Mapbox
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        let mapBrand = MapBrand.Google
+        let mapBrand = MapBrand.Mapbox
         
         switch mapBrand
         {
@@ -51,12 +51,12 @@ class ViewController: UIViewController
             marker.title = "Sydney"
             marker.snippet = "Australia"
             marker.map = googleMap
-        case .MapBox:
-            let styleURL = NSURL(string: "asset://styles/satellite-v8.json")
+        case .Mapbox:
+            let styleURL = NSURL(string: "mapbox://styles/mapbox/satellite-streets-v9")
             
-            mapBoxMap = MGLMapView(frame: view.bounds, styleURL: styleURL)
+            mapboxMap = MGLMapView(frame: view.bounds, styleURL: styleURL)
             
-            view.addSubview(mapBoxMap)
+            view.addSubview(mapboxMap)
         }
     }
 

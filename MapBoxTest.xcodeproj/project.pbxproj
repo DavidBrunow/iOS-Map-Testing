@@ -24,6 +24,8 @@
 		2320201E1BEA878200E32052 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2320201D1BEA878200E32052 /* Settings.bundle */; };
 		2389B5AC1D0CC36300EA1221 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389B5AB1D0CC36300EA1221 /* Credentials.swift */; };
 		2389B5B61D0CC91300EA1221 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2389B5B51D0CC91300EA1221 /* Mapbox.framework */; };
+		2389B5BB1D0CCCA600EA1221 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2389B5BA1D0CCCA600EA1221 /* Mapbox.framework */; };
+		2389B5BC1D0CCCA600EA1221 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2389B5BA1D0CCCA600EA1221 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F691C37A30DBCEFEE44AB9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2945390F2E71F89D45C4FC9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2389B5BC1D0CCCA600EA1221 /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +63,8 @@
 		2320201B1BEA86B800E32052 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		2320201D1BEA878200E32052 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2389B5AB1D0CC36300EA1221 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		2389B5B51D0CC91300EA1221 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		2389B5B51D0CC91300EA1221 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = /Users/davidhbrunow/Documents/Development/MapBoxTest/Mapbox.framework; sourceTree = "<absolute>"; };
+		2389B5BA1D0CCCA600EA1221 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		966FD9758B7C7A5FD944FB8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C2945390F2E71F89D45C4FC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +85,7 @@
 				232020091BEA848500E32052 /* CoreTelephony.framework in Frameworks */,
 				6F691C37A30DBCEFEE44AB9D /* libPods.a in Frameworks */,
 				2389B5B61D0CC91300EA1221 /* Mapbox.framework in Frameworks */,
+				2389B5BB1D0CCCA600EA1221 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +95,7 @@
 		23201F991BEA830000E32052 = {
 			isa = PBXGroup;
 			children = (
-				2389B5B51D0CC91300EA1221 /* Mapbox.framework */,
+				2389B5BA1D0CCCA600EA1221 /* Mapbox.framework */,
 				2320201B1BEA86B800E32052 /* libz.1.dylib */,
 				232020191BEA86A900E32052 /* libsqlite3.dylib */,
 				232020171BEA868E00E32052 /* libc++.1.dylib */,
@@ -119,13 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				23201FA51BEA830000E32052 /* AppDelegate.swift */,
+				2389B5AB1D0CC36300EA1221 /* Credentials.swift */,
 				23201FA71BEA830000E32052 /* ViewController.swift */,
 				23201FA91BEA830000E32052 /* Main.storyboard */,
 				23201FAC1BEA830000E32052 /* Assets.xcassets */,
 				23201FAE1BEA830000E32052 /* LaunchScreen.storyboard */,
 				23201FB11BEA830000E32052 /* Info.plist */,
 				2320201D1BEA878200E32052 /* Settings.bundle */,
-				2389B5AB1D0CC36300EA1221 /* Credentials.swift */,
 			);
 			path = MapBoxTest;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -358,6 +364,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -386,9 +393,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = MapBoxTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -408,9 +417,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = MapBoxTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
